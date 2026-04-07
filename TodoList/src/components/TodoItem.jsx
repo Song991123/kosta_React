@@ -1,6 +1,6 @@
 import React, { memo } from 'react';
 import styled from 'styled-components';
-import { useTodo } from '../context/TodoContext';
+import { useTodoDispatch } from '../context/TodoContext';
 
 const TodoItemWrapper = styled.div`
     display: flex;
@@ -42,7 +42,7 @@ const DateText = styled.div`
 
 // memo: props가 바뀌지 않으면 재렌더 스킵
 const TodoItem = memo(function TodoItem({ id, isDone, content, date }) {
-    const { onUpdate, onDelete } = useTodo();
+    const { onUpdate, onDelete } = useTodoDispatch();
 
     const onChnageCheckbox = () => {
         // 체크박스 클릭 시 해당 id의 isDone 값을 반전시킴

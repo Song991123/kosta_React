@@ -1,7 +1,7 @@
 import React from "react";
 import { useContext } from "react";
 import { useState } from "react";
-import { useTodo } from "../context/TodoContext";
+import { useTodoDispatch } from "../context/TodoContext";
 import styled from 'styled-components';
 
 const EditorWrapper = styled.div`
@@ -29,7 +29,7 @@ const EditorWrapper = styled.div`
 
 
 export default function Editor() {
-    const { onCreate } = useTodo();
+    const { onCreate } = useTodoDispatch();
 
     const [content, setContent] = useState("");
     return (

@@ -2,7 +2,7 @@ import React from "react";
 import { useState } from "react";
 import styled from 'styled-components';
 import TodoItem from "./TodoItem";
-import { useTodo } from "../context/TodoContext";
+import { useTodoState } from "../context/TodoContext";
 
 const ListWrapper = styled.div`
     display: flex;
@@ -31,7 +31,7 @@ const TodosWrapper = styled.div`
 `;
 
 export default function List() {
-    const { todos } = useTodo();
+    const todos = useTodoState();
     const [search, setSearch] = useState("");
 
     // 검색어가 포함된 todo만 필터링 (대소문자 구분 없이)
