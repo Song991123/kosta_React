@@ -1,0 +1,86 @@
+.ex-wrap {
+    display: flex;
+    flex-direction: column;
+    gap: 12px;
+}
+
+.ex-wrap h3 {
+    margin: 0 0 4px;
+    font-size: 1.1rem;
+    color: #2e2640;
+}
+
+.ex-wrap p {
+    margin: 0;
+    padding: 10px 14px;
+    background: #f4f4f8;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    color: #333;
+}
+
+.ex-btn {
+    padding: 8px 18px;
+    border: none;
+    border-radius: 8px;
+    background: #2e2640;
+    color: white;
+    font-size: 0.85rem;
+    font-weight: 700;
+    cursor: pointer;
+    transition: opacity 0.2s;
+    width: fit-content;
+}
+
+.ex-btn:hover {
+    opacity: 0.8;
+}
+
+.ex-btn-row {
+    display: flex;
+    gap: 8px;
+    flex-wrap: wrap;
+}
+
+.ex-input {
+    padding: 8px 12px;
+    border: 1.5px solid #ddd;
+    border-radius: 8px;
+    font-size: 0.95rem;
+    outline: none;
+    transition: border-color 0.2s;
+    width: 200px;
+}
+
+.ex-input:focus {
+    border-color: #2e2640;
+}
+
+.ex-list {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 6px;
+    padding: 0;
+    margin: 0;
+    list-style: none;
+}
+
+.ex-list p {
+    margin: 0;
+    padding: 4px 10px;
+    background: #ece9f4;
+    border-radius: 6px;
+    font-size: 0.85rem;
+    color: #2e2640;
+    font-weight: 600;
+}
+
+.ex-timer {
+    display: inline-block;
+    padding: 6px 14px;
+    background: #ece9f4;
+    border-radius: 8px;
+    color: #2e2640;
+    font-weight: 700;
+    font-size: 0.9rem;
+}
