@@ -84,3 +84,14 @@
     font-weight: 700;
     font-size: 0.9rem;
 }
+
+.ex-user-row {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+    padding: 6px 12px;
+    background: #ece9f4;
+    border-radius: 8px;
+    font-size: 0.9rem;
+    color: #2e2640;
+}

@@ -7,6 +7,7 @@ import Ex04_RefSave from './components/Ex04_RefSave';
 import Ex04_ReRenderer from './components/Ex04_ReRenderer';
 import Ex04_RenderCount from './components/Ex04_RenderCount';
 import CommentList from './comments/CommentList';
+import Ex08_Context from './components/Ex08_Context';
 import ExCard from './components/ExCard';
 import ConsolePanel from './components/ConsolePanel';
 import { ConsoleProvider } from './context/ConsoleContext';
@@ -20,6 +21,7 @@ const TABS = [
   { key: 'Ex04_ReRenderer',  component: <Ex04_ReRenderer /> },
   { key: 'Ex04_RenderCount', component: <Ex04_RenderCount /> },
   { key: 'CommentList', component: <CommentList /> },
+  { key: 'Ex08_Context', component: <Ex08_Context /> },
 ];
 
 function App() {

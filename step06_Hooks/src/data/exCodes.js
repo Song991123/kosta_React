@@ -243,4 +243,25 @@ export default function Comment({ profile, nameText, commentText }) {
     );
 }`,
   },
+  Ex08_Context: {
+    title: 'Ex08 Context',
+    description:
+      'Context API로 컴포넌트 트리 전체에 데이터를 공급하는 예제. ' +
+      'Ex08_Context → Child01 → Child02 → Child03 순서로 중첩되어 있으며, ' +
+      'prop drilling 없이 GlobalContext를 통해 list, setList, btnClick을 공유한다.',
+    code:
+`// Context 생성
+export const GlobalContext = createContext();
+
+// Provider로 자식 전체에 값 공급
+<GlobalContext.Provider value={{list, setList, btnClick01, btnClick02}}>
+    <Ex08_Child01 />
+</GlobalContext.Provider>
+
+// Child01 - useContext로 값 소비
+const {list, setList, btnClick01} = useContext(GlobalContext);
+
+// Child03 - 중간 Child02를 건너뛰고 바로 소비 (prop drilling 없음)
+const {btnClick02} = useContext(GlobalContext);`,
+  },
 };
