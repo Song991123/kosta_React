@@ -1,0 +1,14 @@
+{
+  "users": [
+    { "id": 1, "name": "Alice",   "username": "alice01",   "email": "alice@example.com" },
+    { "id": 2, "name": "Bob",     "username": "bob02",     "email": "bob@example.com" },
+    { "id": 3, "name": "Charlie", "username": "charlie03", "email": "charlie@example.com" }
+  ],
+  "posts": [
+    { "id": 1, "title": "a" },
+    { "id": 2, "title": "b" },
+    { "id": 3, "title": "c" },
+    { "id": 4, "title": "d" },
+    { "id": 5, "title": "e" }
+  ]
+}
