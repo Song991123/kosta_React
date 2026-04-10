@@ -1,6 +1,12 @@
-import { useState } from "react";
 import "./App.css";
 import axios from "axios";
+
+interface User {
+  id: number;
+  name: string;
+  username: string;
+  email: string;
+}
 
 const serverIP = import.meta.env.VITE_API_SERVER_IP;
 
@@ -12,7 +18,7 @@ function App() {
       const res = await fetch(`${serverIP}/users`);
       console.log(res);
       const jsonResult = await res.json();
-      jsonResult.forEach((user, index) => {
+      jsonResult.forEach((user: User, index: number) => {
         console.log(
           index + " = " + user.id + " | " + user.name + " | " + user.username,
         );
@@ -26,10 +32,10 @@ function App() {
   // axios 라이브러리로 비동기 통신
   const axiosSelectAll = async () => {
     try {
-      const res = await axios.get("http://jsonplaceholder.typicode.com/users");
+      const res = await axios.get<User[]>("http://jsonplaceholder.typicode.com/users");
       console.log(res);
       const jsonResult = res.data;
-      jsonResult.forEach((user, index) => {
+      jsonResult.forEach((user: User, index: number) => {
         console.log(
           index + " = " + user.id + " | " + user.name + " | " + user.username,
         );
